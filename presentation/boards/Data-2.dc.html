@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<title>Data — Vérité terrain</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=IBM+Plex+Sans:wght@400;500;600&family=JetBrains+Mono:wght@400;700&display=swap">
+<style>
+body { margin: 0; }
+</style>
+</helmet>
+<div style="width: 1920px; height: 1080px; box-sizing: border-box; padding: 110px 120px; background: #F6F3EC; color: #191714; font-family: 'IBM Plex Sans', sans-serif; display: flex; flex-direction: column; justify-content: space-between">
+
+  <div style="display: flex; justify-content: space-between; align-items: baseline">
+    <div style="font-family: 'JetBrains Mono', monospace; font-size: 24px; letter-spacing: 3px; text-transform: uppercase; color: {{accent}}">Data</div>
+    <div style="font-family: 'JetBrains Mono', monospace; font-size: 24px; color: #8C857A">05 / 13</div>
+  </div>
+
+  <h2 style="margin: 0; width: 1500px; font-family: 'Instrument Serif', Georgia, serif; font-size: 92px; font-weight: 400; line-height: 1.05">Deux vérités terrain, dont une que personne n'utilisait</h2>
+
+  <div style="display: flex; gap: 40px">
+    <div style="flex-grow: 1; flex-basis: 0; padding: 52px; background: #FFFFFF; border-radius: 4px; display: flex; flex-direction: column; gap: 20px">
+      <div style="font-family: 'JetBrains Mono', monospace; font-size: 24px; color: {{accent}}">reference_summary</div>
+      <h3 style="margin: 0; font-family: 'Instrument Serif', Georgia, serif; font-size: 52px; font-weight: 400">Le résumé attendu</h3>
+      <p style="margin: 0; font-size: 28px; line-height: 1.45; color: #4C463D">Un point de comparaison qualitatif pour juger la fidélité du texte produit.</p>
+    </div>
+    <div style="flex-grow: 1; flex-basis: 0; padding: 52px; background: #191714; border-radius: 4px; display: flex; flex-direction: column; gap: 20px">
+      <div style="font-family: 'JetBrains Mono', monospace; font-size: 24px; color: #E8A87C">action_items</div>
+      <h3 style="margin: 0; font-family: 'Instrument Serif', Georgia, serif; font-size: 52px; font-weight: 400; color: #F6F3EC">Les décisions réelles</h3>
+      <p style="margin: 0; font-size: 28px; line-height: 1.45; color: #C9C2B6">Une liste exacte de ce qui a été décidé. Elle permet de mesurer objectivement ce que le modèle a retrouvé — ou inventé.</p>
+    </div>
+  </div>
+
+  <p style="margin: 0; width: 1560px; font-family: 'Instrument Serif', Georgia, serif; font-size: 42px; font-style: italic; line-height: 1.35">Le sujet ne demandait rien de ce second champ. Nous l'avons exploité : c'est devenu notre mesure la plus objective.</p>
+
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"accent":{"editor":"color","default":"#1F4D52","options":["#1F4D52","#C2542B","#B08A3E"],"section":"Theme"},"$preview":{"width":1920,"height":1080}}'>
+class Component extends DCLogic {
+  renderVals() { return { accent: this.props.accent ?? '#1F4D52' }; }
+}
+</script>
+</body>
+</html>

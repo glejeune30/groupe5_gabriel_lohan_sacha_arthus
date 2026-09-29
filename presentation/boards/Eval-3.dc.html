@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<title>Évaluation — Registre, rappel, reproductibilité</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=IBM+Plex+Sans:wght@400;500;600&family=JetBrains+Mono:wght@400;700&display=swap">
+<style>
+body { margin: 0; }
+</style>
+</helmet>
+<div style="width: 1920px; height: 1080px; box-sizing: border-box; padding: 110px 120px; background: #F6F3EC; color: #191714; font-family: 'IBM Plex Sans', sans-serif; display: flex; flex-direction: column; justify-content: space-between">
+
+  <div style="display: flex; justify-content: space-between; align-items: baseline">
+    <div style="font-family: 'JetBrains Mono', monospace; font-size: 24px; letter-spacing: 3px; text-transform: uppercase; color: {{accent}}">Évaluation</div>
+    <div style="font-family: 'JetBrains Mono', monospace; font-size: 24px; color: #8C857A">12 / 13</div>
+  </div>
+
+  <h2 style="margin: 0; font-family: 'Instrument Serif', Georgia, serif; font-size: 88px; font-weight: 400; line-height: 1.05">Deux mesures, et un problème de méthode</h2>
+
+  <div style="display: flex; gap: 40px">
+    <div style="flex-grow: 1; flex-basis: 0; padding: 44px; background: #FFFFFF; border-radius: 4px; display: flex; flex-direction: column; gap: 18px">
+      <h3 style="margin: 0; font-family: 'Instrument Serif', Georgia, serif; font-size: 48px; font-weight: 400">Registre</h3>
+      <div style="display: flex; align-items: baseline; gap: 20px">
+        <span style="font-family: 'JetBrains Mono', monospace; font-size: 62px; font-weight: 700; color: #8C857A">100 %</span>
+        <span style="font-family: 'JetBrains Mono', monospace; font-size: 34px; color: {{accent}}">&rarr;</span>
+        <span style="font-family: 'JetBrains Mono', monospace; font-size: 62px; font-weight: 700; color: {{accent}}">30 %</span>
+      </div>
+      <p style="margin: 0; font-size: 26px; line-height: 1.4; color: #4C463D">Recouvrement de vocabulaire entre manager et ingénieur, v1 puis v2.</p>
+    </div>
+    <div style="flex-grow: 1; flex-basis: 0; padding: 44px; background: #FFFFFF; border-radius: 4px; display: flex; flex-direction: column; gap: 18px">
+      <h3 style="margin: 0; font-family: 'Instrument Serif', Georgia, serif; font-size: 48px; font-weight: 400">Rappel des décisions</h3>
+      <div style="font-family: 'JetBrains Mono', monospace; font-size: 62px; font-weight: 700; color: {{accent}}">88 %</div>
+      <p style="margin: 0; font-size: 26px; line-height: 1.4; color: #4C463D">des action_items retrouvés. Mesure lexicale : une reformulation sans mot commun compte comme un échec.</p>
+    </div>
+  </div>
+
+  <div style="padding: 44px; background: #191714; border-radius: 4px; display: flex; flex-direction: column; gap: 14px">
+    <h3 style="margin: 0; font-family: 'Instrument Serif', Georgia, serif; font-size: 48px; font-weight: 400; color: #E8A87C">Ce qu'on a découvert en route</h3>
+    <p style="margin: 0; font-size: 29px; line-height: 1.45; color: #C9C2B6">Deux exécutions à température 0 donnaient 38 % puis 12 % sur le même contrôle : Ollama tire une graine aléatoire à chaque appel. Nos chiffres n'étaient pas reproductibles. Graine fixée, et corpus noté gelé dans un fichier.</p>
+  </div>
+
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"accent":{"editor":"color","default":"#1F4D52","options":["#1F4D52","#C2542B","#B08A3E"],"section":"Theme"},"$preview":{"width":1920,"height":1080}}'>
+class Component extends DCLogic {
+  renderVals() { return { accent: this.props.accent ?? '#1F4D52' }; }
+}
+</script>
+</body>
+</html>

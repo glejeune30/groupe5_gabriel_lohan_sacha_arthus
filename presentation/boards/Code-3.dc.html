@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<title>Code — Itération v1 / v2</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=IBM+Plex+Sans:wght@400;500;600&family=JetBrains+Mono:wght@400;700&display=swap">
+<style>
+body { margin: 0; }
+</style>
+</helmet>
+<div style="width: 1920px; height: 1080px; box-sizing: border-box; padding: 110px 120px; background: #191714; color: #F6F3EC; font-family: 'IBM Plex Sans', sans-serif; display: flex; flex-direction: column; justify-content: space-between">
+
+  <div style="display: flex; justify-content: space-between; align-items: baseline">
+    <div style="font-family: 'JetBrains Mono', monospace; font-size: 24px; letter-spacing: 3px; text-transform: uppercase; color: #E8A87C">Code &amp; prompts — l'itération</div>
+    <div style="font-family: 'JetBrains Mono', monospace; font-size: 24px; color: #8C857A">08 / 13</div>
+  </div>
+
+  <h2 style="margin: 0; font-family: 'Instrument Serif', Georgia, serif; font-size: 88px; font-weight: 400; line-height: 1.05">Dire <span style="font-style: italic">pour qui écrire</span> ne suffit pas</h2>
+
+  <div style="display: flex; gap: 40px">
+    <div style="flex-grow: 1; flex-basis: 0; padding: 44px; background: #0F0E0C; border-radius: 4px; display: flex; flex-direction: column; gap: 22px">
+      <div style="font-family: 'JetBrains Mono', monospace; font-size: 24px; color: #8C857A">Version 1</div>
+      <div style="font-family: 'JetBrains Mono', monospace; font-size: 26px; line-height: 1.5; color: #C9C2B6">Audience: a non-technical manager</div>
+      <p style="margin: 0; font-size: 27px; line-height: 1.45; color: #8C857A">Le modèle produit exactement le même texte pour les deux audiences.</p>
+    </div>
+    <div style="flex-grow: 1; flex-basis: 0; padding: 44px; background: #0F0E0C; border-radius: 4px; border-left: 4px solid #E8A87C; display: flex; flex-direction: column; gap: 22px">
+      <div style="font-family: 'JetBrains Mono', monospace; font-size: 24px; color: #E8A87C">Version 2</div>
+      <div style="font-family: 'JetBrains Mono', monospace; font-size: 23px; line-height: 1.5; color: #C9C2B6">Use plain business language.<br>Ban technical jargon entirely.<br>Emphasise impact, deadlines and risk.</div>
+      <p style="margin: 0; font-size: 27px; line-height: 1.45; color: #C9C2B6">On ne nomme plus le lecteur : on décrit l'opération à effectuer sur le texte.</p>
+    </div>
+  </div>
+
+  <div style="display: flex; align-items: baseline; gap: 28px">
+    <p style="margin: 0; font-size: 32px; color: #C9C2B6">Recouvrement de vocabulaire entre les deux audiences</p>
+    <div style="font-family: 'JetBrains Mono', monospace; font-size: 56px; font-weight: 700; color: #8C857A">100 %</div>
+    <div style="font-family: 'JetBrains Mono', monospace; font-size: 40px; color: #E8A87C">&rarr;</div>
+    <div style="font-family: 'JetBrains Mono', monospace; font-size: 56px; font-weight: 700; color: #E8A87C">30 %</div>
+  </div>
+
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":1920,"height":1080}}'>
+class Component extends DCLogic {
+  renderVals() { return {}; }
+}
+</script>
+</body>
+</html>

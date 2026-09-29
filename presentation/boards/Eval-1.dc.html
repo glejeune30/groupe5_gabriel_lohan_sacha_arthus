@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<title>Évaluation — Format et longueur</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=IBM+Plex+Sans:wght@400;500;600&family=JetBrains+Mono:wght@400;700&display=swap">
+<style>
+body { margin: 0; }
+</style>
+</helmet>
+<div style="width: 1920px; height: 1080px; box-sizing: border-box; padding: 110px 120px; background: #F6F3EC; color: #191714; font-family: 'IBM Plex Sans', sans-serif; display: flex; flex-direction: column; justify-content: space-between">
+
+  <div style="display: flex; justify-content: space-between; align-items: baseline">
+    <div style="font-family: 'JetBrains Mono', monospace; font-size: 24px; letter-spacing: 3px; text-transform: uppercase; color: {{accent}}">Évaluation</div>
+    <div style="font-family: 'JetBrains Mono', monospace; font-size: 24px; color: #8C857A">10 / 13</div>
+  </div>
+
+  <h2 style="margin: 0; width: 1560px; font-family: 'Instrument Serif', Georgia, serif; font-size: 88px; font-weight: 400; line-height: 1.05">Le modèle ne sait pas compter — la consigne peut compter pour lui</h2>
+
+  <div style="display: flex; gap: 32px; align-items: stretch">
+    <div style="flex-grow: 1; flex-basis: 0; padding: 44px; background: #FFFFFF; border-radius: 4px; display: flex; flex-direction: column; gap: 10px">
+      <div style="font-size: 26px; color: #8C857A">Longueur — v1</div>
+      <div style="font-family: 'JetBrains Mono', monospace; font-size: 104px; font-weight: 700; color: #8C857A">25 %</div>
+      <p style="margin: 0; font-size: 26px; line-height: 1.4; color: #4C463D">Budget de 50 mots demandé. Médiane obtenue : 52.</p>
+    </div>
+    <div style="width: 56px; display: flex; align-items: center; justify-content: center; font-family: 'JetBrains Mono', monospace; font-size: 44px; color: {{accent}}">&rarr;</div>
+    <div style="flex-grow: 1; flex-basis: 0; padding: 44px; background: #191714; border-radius: 4px; display: flex; flex-direction: column; gap: 10px">
+      <div style="font-size: 26px; color: #C9C2B6">Longueur — v2</div>
+      <div style="font-family: 'JetBrains Mono', monospace; font-size: 104px; font-weight: 700; color: #E8A87C">100 %</div>
+      <p style="margin: 0; font-size: 26px; line-height: 1.4; color: #C9C2B6">On demande 30 pour un budget de 50, avec un gabarit rigide. Médiane : 35.</p>
+    </div>
+    <div style="flex-grow: 1; flex-basis: 0; padding: 44px; background: #FFFFFF; border-radius: 4px; display: flex; flex-direction: column; gap: 10px">
+      <div style="font-size: 26px; color: #8C857A">Format — v1 et v2</div>
+      <div style="font-family: 'JetBrains Mono', monospace; font-size: 104px; font-weight: 700; color: {{accent}}">100 %</div>
+      <p style="margin: 0; font-size: 26px; line-height: 1.4; color: #4C463D">3 points exacts et section Actions, dans les deux versions.</p>
+    </div>
+  </div>
+
+  <p style="margin: 0; width: 1600px; font-family: 'Instrument Serif', Georgia, serif; font-size: 42px; font-style: italic; line-height: 1.35">Le dépassement était régulier, pas erratique. On ne corrige pas le modèle, on corrige la consigne.</p>
+
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"accent":{"editor":"color","default":"#C2542B","options":["#C2542B","#1F4D52","#B08A3E"],"section":"Theme"},"$preview":{"width":1920,"height":1080}}'>
+class Component extends DCLogic {
+  renderVals() { return { accent: this.props.accent ?? '#C2542B' }; }
+}
+</script>
+</body>
+</html>

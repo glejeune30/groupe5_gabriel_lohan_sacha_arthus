@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<title>Business — L'enjeu</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=IBM+Plex+Sans:wght@400;500;600&family=JetBrains+Mono:wght@400;700&display=swap">
+<style>
+body { margin: 0; }
+</style>
+</helmet>
+<div style="width: 1920px; height: 1080px; box-sizing: border-box; padding: 110px 120px; background: #F6F3EC; color: #191714; font-family: 'IBM Plex Sans', sans-serif; display: flex; flex-direction: column; justify-content: space-between">
+
+  <div style="display: flex; justify-content: space-between; align-items: baseline">
+    <div style="font-family: 'JetBrains Mono', monospace; font-size: 24px; letter-spacing: 3px; text-transform: uppercase; color: {{accent}}">Business</div>
+    <div style="font-family: 'JetBrains Mono', monospace; font-size: 24px; color: #8C857A">02 / 13</div>
+  </div>
+
+  <h2 style="margin: 0; width: 1520px; font-family: 'Instrument Serif', Georgia, serif; font-size: 96px; font-weight: 400; line-height: 1.05; letter-spacing: -1px">Un résumé de réunion n'a de valeur que si on peut lui faire confiance</h2>
+
+  <div style="display: flex; gap: 40px">
+    <div style="flex-grow: 1; flex-basis: 0; padding: 48px; background: #FFFFFF; border-radius: 4px; display: flex; flex-direction: column; gap: 18px">
+      <div style="font-family: 'JetBrains Mono', monospace; font-size: 22px; color: {{accent}}">01</div>
+      <h3 style="margin: 0; font-family: 'Instrument Serif', Georgia, serif; font-size: 46px; font-weight: 400">Le besoin</h3>
+      <p style="margin: 0; font-size: 28px; line-height: 1.45; color: #4C463D">Chaque réunion produit des décisions. Les retrouver demande de relire toute la transcription.</p>
+    </div>
+    <div style="flex-grow: 1; flex-basis: 0; padding: 48px; background: #FFFFFF; border-radius: 4px; display: flex; flex-direction: column; gap: 18px">
+      <div style="font-family: 'JetBrains Mono', monospace; font-size: 22px; color: {{accent}}">02</div>
+      <h3 style="margin: 0; font-family: 'Instrument Serif', Georgia, serif; font-size: 46px; font-weight: 400">La contrainte</h3>
+      <p style="margin: 0; font-size: 28px; line-height: 1.45; color: #4C463D">Un manager et un ingénieur n'ont besoin ni du même résumé, ni de la même longueur.</p>
+    </div>
+    <div style="flex-grow: 1; flex-basis: 0; padding: 48px; background: #191714; border-radius: 4px; display: flex; flex-direction: column; gap: 18px">
+      <div style="font-family: 'JetBrains Mono', monospace; font-size: 22px; color: #E8A87C">03</div>
+      <h3 style="margin: 0; font-family: 'Instrument Serif', Georgia, serif; font-size: 46px; font-weight: 400; color: #F6F3EC">Le risque</h3>
+      <p style="margin: 0; font-size: 28px; line-height: 1.45; color: #C9C2B6">Un résumé qui invente une décision est pire que pas de résumé du tout.</p>
+    </div>
+  </div>
+
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"accent":{"editor":"color","default":"#C2542B","options":["#C2542B","#1F4D52","#B08A3E"],"section":"Theme"},"$preview":{"width":1920,"height":1080}}'>
+class Component extends DCLogic {
+  renderVals() { return { accent: this.props.accent ?? '#C2542B' }; }
+}
+</script>
+</body>
+</html>

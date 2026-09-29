@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<title>Projet 5 — Couverture</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=IBM+Plex+Sans:wght@400;500;600&family=JetBrains+Mono:wght@400;700&display=swap">
+<style>
+body { margin: 0; }
+</style>
+</helmet>
+<div style="width: 1920px; height: 1080px; box-sizing: border-box; padding: 120px; background: #191714; color: #F6F3EC; font-family: 'IBM Plex Sans', sans-serif; display: flex; flex-direction: column; justify-content: space-between">
+
+  <div style="display: flex; justify-content: space-between; align-items: flex-start">
+    <div style="font-family: 'JetBrains Mono', monospace; font-size: 26px; letter-spacing: 3px; text-transform: uppercase; color: {{accent}}">Projet 5 — Prompt engineering</div>
+    <div style="font-family: 'JetBrains Mono', monospace; font-size: 26px; color: #8C857A">01 / 13</div>
+  </div>
+
+  <div style="display: flex; flex-direction: column; gap: 40px">
+    <div style="width: 160px; height: 4px; background: {{accent}}"></div>
+    <h1 style="margin: 0; font-family: 'Instrument Serif', Georgia, serif; font-size: 170px; font-weight: 400; line-height: 0.95; letter-spacing: -2px">Résumeur<br><span style="font-style: italic; color: {{accent}}">contrôlable</span></h1>
+    <p style="margin: 0; width: 1180px; font-size: 40px; line-height: 1.4; color: #C9C2B6">Résumer une réunion en contrôlant l'audience, la longueur et le format — et prouver que l'évaluation elle-même tient debout.</p>
+  </div>
+
+  <div style="display: flex; justify-content: space-between; align-items: flex-end">
+    <div style="font-size: 30px; color: #C9C2B6">Groupe 5 — Gabriel, Lohan, Sacha, Arthus</div>
+    <div style="font-family: 'JetBrains Mono', monospace; font-size: 26px; color: #8C857A">llama3.2:3b · Ollama local · seed 7</div>
+  </div>
+
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"accent":{"editor":"color","default":"#C2542B","options":["#C2542B","#1F4D52","#B08A3E","#F6F3EC"],"section":"Theme"},"$preview":{"width":1920,"height":1080}}'>
+class Component extends DCLogic {
+  renderVals() {
+    return { accent: this.props.accent ?? '#C2542B' };
+  }
+}
+</script>
+</body>
+</html>

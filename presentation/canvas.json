@@ -1,0 +1,45 @@
+{
+  "v": 3,
+  "createdOnFiles": { "v": 1, "at": "2026-09-29T12:00:00Z" },
+  "title": "Projet 5 — Slides (design)",
+  "launch": { "view": "canvas" },
+  "pages": [],
+  "boards": {
+    "Main.dc.html":        { "x": 0,    "y": 0,    "w": 1920, "h": 1080, "title": "Couverture" },
+    "Business-1.dc.html":  { "x": 0,    "y": 1200, "w": 1920, "h": 1080, "title": "L'enjeu" },
+    "Business-2.dc.html":  { "x": 2000, "y": 1200, "w": 1920, "h": 1080, "title": "Trois leviers" },
+    "Data-1.dc.html":      { "x": 0,    "y": 2400, "w": 1920, "h": 1080, "title": "Le corpus" },
+    "Data-2.dc.html":      { "x": 2000, "y": 2400, "w": 1920, "h": 1080, "title": "Vérité terrain" },
+    "Code-1.dc.html":      { "x": 0,    "y": 3600, "w": 1920, "h": 1080, "title": "Pipeline" },
+    "Code-2.dc.html":      { "x": 2000, "y": 3600, "w": 1920, "h": 1080, "title": "Le prompt" },
+    "Code-3.dc.html":      { "x": 4000, "y": 3600, "w": 1920, "h": 1080, "title": "Itération v1/v2" },
+    "Code-4.dc.html":      { "x": 6000, "y": 3600, "w": 1920, "h": 1080, "title": "Le juge" },
+    "Eval-1.dc.html":      { "x": 0,    "y": 4800, "w": 1920, "h": 1080, "title": "Format et longueur" },
+    "Eval-2.dc.html":      { "x": 2000, "y": 4800, "w": 1920, "h": 1080, "title": "Le juge vs nous" },
+    "Eval-3.dc.html":      { "x": 4000, "y": 4800, "w": 1920, "h": 1080, "title": "Registre et rappel" },
+    "Conclusion.dc.html":  { "x": 6000, "y": 4800, "w": 1920, "h": 1080, "title": "Conclusion" }
+  },
+  "order": [
+    "Main.dc.html",
+    "Business-1.dc.html",
+    "Business-2.dc.html",
+    "Data-1.dc.html",
+    "Data-2.dc.html",
+    "Code-1.dc.html",
+    "Code-2.dc.html",
+    "Code-3.dc.html",
+    "Code-4.dc.html",
+    "Eval-1.dc.html",
+    "Eval-2.dc.html",
+    "Eval-3.dc.html",
+    "Conclusion.dc.html"
+  ],
+  "notes": {
+    "n1": { "x": 0, "y": -260, "text": "Ouverture", "kind": "title1", "maxW": 1920, "color": "gray" },
+    "n2": { "x": 0, "y": 940,  "text": "Business", "kind": "title1", "maxW": 3920, "color": "orange" },
+    "n3": { "x": 0, "y": 2140, "text": "Data", "kind": "title1", "maxW": 3920, "color": "teal" },
+    "n4": { "x": 0, "y": 3340, "text": "Code & prompts", "kind": "title1", "maxW": 7920, "color": "blue" },
+    "n5": { "x": 0, "y": 4540, "text": "Évaluation", "kind": "title1", "maxW": 7920, "color": "orange" }
+  },
+  "designSystems": []
+}

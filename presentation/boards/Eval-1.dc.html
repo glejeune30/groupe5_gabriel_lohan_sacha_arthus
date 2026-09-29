@@ -17,31 +17,30 @@ body { margin: 0; }
 
   <div style="display: flex; justify-content: space-between; align-items: baseline">
     <div style="font-family: 'JetBrains Mono', monospace; font-size: 24px; letter-spacing: 3px; text-transform: uppercase; color: {{accent}}">Évaluation</div>
-    <div style="font-family: 'JetBrains Mono', monospace; font-size: 24px; color: #8C857A">10 / 13</div>
+    <div style="font-family: 'JetBrains Mono', monospace; font-size: 24px; color: #8C857A">10 / 14</div>
   </div>
 
   <h2 style="margin: 0; width: 1560px; font-family: 'Instrument Serif', Georgia, serif; font-size: 88px; font-weight: 400; line-height: 1.05">Le modèle ne sait pas compter — la consigne peut compter pour lui</h2>
 
   <div style="display: flex; gap: 32px; align-items: stretch">
     <div style="flex-grow: 1; flex-basis: 0; padding: 44px; background: #FFFFFF; border-radius: 4px; display: flex; flex-direction: column; gap: 10px">
-      <div style="font-size: 26px; color: #8C857A">Longueur — v1</div>
-      <div style="font-family: 'JetBrains Mono', monospace; font-size: 104px; font-weight: 700; color: #8C857A">25 %</div>
-      <p style="margin: 0; font-size: 26px; line-height: 1.4; color: #4C463D">Budget de 50 mots demandé. Médiane obtenue : 52.</p>
-    </div>
-    <div style="width: 56px; display: flex; align-items: center; justify-content: center; font-family: 'JetBrains Mono', monospace; font-size: 44px; color: {{accent}}">&rarr;</div>
-    <div style="flex-grow: 1; flex-basis: 0; padding: 44px; background: #191714; border-radius: 4px; display: flex; flex-direction: column; gap: 10px">
-      <div style="font-size: 26px; color: #C9C2B6">Longueur — v2</div>
-      <div style="font-family: 'JetBrains Mono', monospace; font-size: 104px; font-weight: 700; color: #E8A87C">100 %</div>
-      <p style="margin: 0; font-size: 26px; line-height: 1.4; color: #C9C2B6">On demande 30 pour un budget de 50, avec un gabarit rigide. Médiane : 35.</p>
+      <div style="font-size: 26px; color: #8C857A">Format</div>
+      <div style="font-family: 'JetBrains Mono', monospace; font-size: 100px; font-weight: 700; color: {{accent}}">8/8</div>
+      <p style="margin: 0; font-size: 26px; line-height: 1.4; color: #4C463D">3 puces exactes et section Actions, sur sortie brute — aucune réparation après coup.</p>
     </div>
     <div style="flex-grow: 1; flex-basis: 0; padding: 44px; background: #FFFFFF; border-radius: 4px; display: flex; flex-direction: column; gap: 10px">
-      <div style="font-size: 26px; color: #8C857A">Format — v1 et v2</div>
-      <div style="font-family: 'JetBrains Mono', monospace; font-size: 104px; font-weight: 700; color: {{accent}}">100 %</div>
-      <p style="margin: 0; font-size: 26px; line-height: 1.4; color: #4C463D">3 points exacts et section Actions, dans les deux versions.</p>
+      <div style="font-size: 26px; color: #8C857A">Longueur ≤ 50 mots</div>
+      <div style="font-family: 'JetBrains Mono', monospace; font-size: 100px; font-weight: 700; color: {{accent}}">8/8</div>
+      <p style="margin: 0; font-size: 26px; line-height: 1.4; color: #4C463D">Cible interne de 30 mots et préambule interdit.</p>
+    </div>
+    <div style="flex-grow: 1; flex-basis: 0; padding: 44px; background: #191714; border-radius: 4px; display: flex; flex-direction: column; gap: 10px">
+      <div style="font-size: 26px; color: #C9C2B6">Actions — rappel / précision</div>
+      <div style="font-family: 'JetBrains Mono', monospace; font-size: 100px; font-weight: 700; color: #E8A87C">81/60</div>
+      <p style="margin: 0; font-size: 26px; line-height: 1.4; color: #C9C2B6">Itération de règle : 69 % → 81 % de rappel. La précision reste le point faible.</p>
     </div>
   </div>
 
-  <p style="margin: 0; width: 1600px; font-family: 'Instrument Serif', Georgia, serif; font-size: 42px; font-style: italic; line-height: 1.35">Le dépassement était régulier, pas erratique. On ne corrige pas le modèle, on corrige la consigne.</p>
+  <p style="margin: 0; width: 1600px; font-family: 'Instrument Serif', Georgia, serif; font-size: 42px; font-style: italic; line-height: 1.35">Viser une cible plus basse plutôt que demander au modèle de compter. On ne corrige pas le modèle, on corrige la consigne.</p>
 
 </div>
 </x-dc>

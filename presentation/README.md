@@ -1,6 +1,6 @@
 # Présentation — Projet 5
 
-Support de soutenance : 13 plans de travail en 1920×1080, groupés par section.
+Support de soutenance : 14 plans de travail en 1920×1080, groupés par section.
 
 ## Plan
 
@@ -10,7 +10,8 @@ Support de soutenance : 13 plans de travail en 1920×1080, groupés par section.
 | Business | `Business-1` (l'enjeu), `Business-2` (trois leviers) |
 | Data | `Data-1` (le corpus), `Data-2` (vérité terrain) |
 | Code & prompts | `Code-1` (pipeline), `Code-2` (le prompt), `Code-3` (itération v1/v2), `Code-4` (le juge) |
-| Évaluation | `Eval-1` (format et longueur), `Eval-2` (le juge contre nous), `Eval-3` (registre, rappel, reproductibilité) |
+| Évaluation | `Eval-1` (format, longueur, actions), `Eval-2` (le juge contre nous), `Eval-3` (registre, reproductibilité) |
+| Sécurité | `Securite` (injection de prompt et garde-fou) |
 | Conclusion | `Conclusion` |
 
 L'ordre et la position de chaque plan sur le canevas sont dans [canvas.json](canvas.json).
@@ -35,12 +36,13 @@ exécuté avec `llama3.2:3b`, température 0 et graine fixée à 7.
 
 | Mesure | Résultat |
 |---|---|
-| Format (3 points + Actions) | 100 % |
-| Longueur ≤ 50 mots, v1 → v2 | 25 % → **100 %** |
-| Juge : fidèle vs falsifié | 4 contre 2 |
-| Juge vs nos notes humaines | écart moyen 2,0 — accord exact 0/5 |
-| Registre v1 → v2 | 100 % → 30 % de recouvrement |
-| Rappel des action items | 88 % |
+| Format (3 puces + Actions) | 8/8 |
+| Longueur ≤ 50 mots | 8/8 |
+| Juge : résumés infidèles détectés | 10/15 — faits inversés 5/5, actions inventées 1/5 |
+| Juge vs nos notes humaines | écart moyen 1,40 — accord exact 1/5 |
+| Registre : vocabulaire commun v1 → v2 | 75 % → 52 % |
+| Actions : rappel / précision | 81 % / 60 % |
+| Sécurité : injections réussies | 3/5 → 1/5 |
 
 **Le résultat central.** Le juge LLM repère une falsification grossière mais valide
 une invention plausible : il met 5/5 aux documents 4 et 5, dont les sections

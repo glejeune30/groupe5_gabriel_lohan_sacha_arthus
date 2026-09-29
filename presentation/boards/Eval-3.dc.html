@@ -2,7 +2,7 @@
 <html lang="fr">
 <head>
 <meta charset="utf-8">
-<title>Évaluation — Registre, rappel, reproductibilité</title>
+<title>Évaluation — Registre et reproductibilité</title>
 <script src="./support.js"></script>
 </head>
 <body>
@@ -17,31 +17,31 @@ body { margin: 0; }
 
   <div style="display: flex; justify-content: space-between; align-items: baseline">
     <div style="font-family: 'JetBrains Mono', monospace; font-size: 24px; letter-spacing: 3px; text-transform: uppercase; color: {{accent}}">Évaluation</div>
-    <div style="font-family: 'JetBrains Mono', monospace; font-size: 24px; color: #8C857A">12 / 13</div>
+    <div style="font-family: 'JetBrains Mono', monospace; font-size: 24px; color: #8C857A">12 / 14</div>
   </div>
 
-  <h2 style="margin: 0; font-family: 'Instrument Serif', Georgia, serif; font-size: 88px; font-weight: 400; line-height: 1.05">Deux mesures, et un problème de méthode</h2>
+  <h2 style="margin: 0; font-family: 'Instrument Serif', Georgia, serif; font-size: 88px; font-weight: 400; line-height: 1.05">Le registre, et un problème de méthode</h2>
 
   <div style="display: flex; gap: 40px">
     <div style="flex-grow: 1; flex-basis: 0; padding: 44px; background: #FFFFFF; border-radius: 4px; display: flex; flex-direction: column; gap: 18px">
-      <h3 style="margin: 0; font-family: 'Instrument Serif', Georgia, serif; font-size: 48px; font-weight: 400">Registre</h3>
+      <h3 style="margin: 0; font-family: 'Instrument Serif', Georgia, serif; font-size: 48px; font-weight: 400">Registre selon l'audience</h3>
       <div style="display: flex; align-items: baseline; gap: 20px">
-        <span style="font-family: 'JetBrains Mono', monospace; font-size: 62px; font-weight: 700; color: #8C857A">100 %</span>
+        <span style="font-family: 'JetBrains Mono', monospace; font-size: 62px; font-weight: 700; color: #8C857A">75 %</span>
         <span style="font-family: 'JetBrains Mono', monospace; font-size: 34px; color: {{accent}}">&rarr;</span>
-        <span style="font-family: 'JetBrains Mono', monospace; font-size: 62px; font-weight: 700; color: {{accent}}">30 %</span>
+        <span style="font-family: 'JetBrains Mono', monospace; font-size: 62px; font-weight: 700; color: {{accent}}">52 %</span>
       </div>
-      <p style="margin: 0; font-size: 26px; line-height: 1.4; color: #4C463D">Recouvrement de vocabulaire entre manager et ingénieur, v1 puis v2.</p>
+      <p style="margin: 0; font-size: 26px; line-height: 1.4; color: #4C463D">Vocabulaire commun entre manager et ingénieur, v1 puis v2. Moins de mots partagés = registre plus distinct.</p>
     </div>
     <div style="flex-grow: 1; flex-basis: 0; padding: 44px; background: #FFFFFF; border-radius: 4px; display: flex; flex-direction: column; gap: 18px">
-      <h3 style="margin: 0; font-family: 'Instrument Serif', Georgia, serif; font-size: 48px; font-weight: 400">Rappel des décisions</h3>
-      <div style="font-family: 'JetBrains Mono', monospace; font-size: 62px; font-weight: 700; color: {{accent}}">88 %</div>
-      <p style="margin: 0; font-size: 26px; line-height: 1.4; color: #4C463D">des action_items retrouvés. Mesure lexicale : une reformulation sans mot commun compte comme un échec.</p>
+      <h3 style="margin: 0; font-family: 'Instrument Serif', Georgia, serif; font-size: 48px; font-weight: 400">Nommer ne suffit pas</h3>
+      <p style="margin: 0; font-size: 28px; line-height: 1.45; color: #4C463D">Écrire « Audience : un manager » ne change presque rien. Décrire l'opération — bannir le jargon, insister sur l'impact — fonctionne.</p>
+      <p style="margin: 0; font-size: 26px; line-height: 1.4; color: #8C857A">Même mesure des deux côtés, sinon on ne compare rien.</p>
     </div>
   </div>
 
   <div style="padding: 44px; background: #191714; border-radius: 4px; display: flex; flex-direction: column; gap: 14px">
     <h3 style="margin: 0; font-family: 'Instrument Serif', Georgia, serif; font-size: 48px; font-weight: 400; color: #E8A87C">Ce qu'on a découvert en route</h3>
-    <p style="margin: 0; font-size: 29px; line-height: 1.45; color: #C9C2B6">Deux exécutions à température 0 donnaient 38 % puis 12 % sur le même contrôle : Ollama tire une graine aléatoire à chaque appel. Nos chiffres n'étaient pas reproductibles. Graine fixée, et corpus noté gelé dans un fichier.</p>
+    <p style="margin: 0; font-size: 29px; line-height: 1.45; color: #C9C2B6">Deux exécutions à température 0 donnaient 38 % puis 12 % sur le même contrôle : Ollama tire une graine aléatoire à chaque appel. Nos chiffres n'étaient pas reproductibles. Graine fixée à 7, et les 5 résumés notés à la main gelés avec leurs notes.</p>
   </div>
 
 </div>

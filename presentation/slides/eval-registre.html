@@ -1,36 +1,33 @@
-<section id="eval-registre" data-transition="fade" style="background:#F7F8F5; color:#16202C; font-family:'IBM Plex Sans', Arial, sans-serif; padding:128px; display:flex; flex-direction:column; gap:44px">
+<section id="eval-registre" data-transition="fade" style="background:#F7F8F5; color:#16202C; font-family:'IBM Plex Sans', Arial, sans-serif; padding:128px; display:flex; flex-direction:column; gap:40px">
 <p style="font-family:'JetBrains Mono', 'Courier New', monospace; font-size:26px; color:#C8702A; letter-spacing:2px; text-transform:uppercase">Évaluation</p>
-<h2 style="font-size:72px; font-weight:600; line-height:1.1">Les deux autres mesures</h2>
-<div style="display:flex; gap:32px">
-<div style="flex:1; display:flex; flex-direction:column; gap:20px; background:#FFFFFF; padding:44px; border:1px solid #DDE2E0; border-radius:16px">
-<h3 style="font-size:36px; font-weight:600">Registre selon l'audience</h3>
-<div style="display:flex; gap:24px; align-items:center">
-<div style="display:flex; flex-direction:column; gap:4px">
-<p style="font-family:'JetBrains Mono', 'Courier New', monospace; font-size:58px; font-weight:700; color:#8A97A6">100 %</p>
-<p style="font-size:25px; color:#4A5568">v1 — recouvrement</p>
+<h2 style="font-size:68px; font-weight:600; line-height:1.1">Les deux autres mesures — et un problème de méthode</h2>
+<div style="display:flex; gap:28px">
+<div style="flex:1; display:flex; flex-direction:column; gap:16px; background:#FFFFFF; padding:40px; border:1px solid #DDE2E0; border-radius:16px">
+<h3 style="font-size:34px; font-weight:600">Registre selon l'audience</h3>
+<div style="display:flex; gap:20px; align-items:center">
+<p style="font-family:'JetBrains Mono', 'Courier New', monospace; font-size:52px; font-weight:700; color:#8A97A6">100 %</p>
+<x-shape kind="arrow-right" style="width:56px; height:28px; background:#2F6FAE"></x-shape>
+<p style="font-family:'JetBrains Mono', 'Courier New', monospace; font-size:52px; font-weight:700; color:#2F6FAE">30 %</p>
 </div>
-<x-shape kind="arrow-right" style="width:64px; height:32px; background:#2F6FAE"></x-shape>
-<div style="display:flex; flex-direction:column; gap:4px">
-<p style="font-family:'JetBrains Mono', 'Courier New', monospace; font-size:58px; font-weight:700; color:#2F6FAE">24 %</p>
-<p style="font-size:25px; color:#4A5568">v2 — recouvrement</p>
+<p style="font-size:26px; line-height:1.4; color:#4A5568">Recouvrement de vocabulaire entre manager et ingénieur, v1 puis v2.</p>
 </div>
-</div>
-<p style="font-size:27px; line-height:1.4; color:#4A5568">Nommer l'audience ne change rien. Décrire l'opération à effectuer fonctionne.</p>
-</div>
-<div style="flex:1; display:flex; flex-direction:column; gap:20px; background:#FFFFFF; padding:44px; border:1px solid #DDE2E0; border-radius:16px">
-<h3 style="font-size:36px; font-weight:600">Rappel des décisions</h3>
-<p style="font-family:'JetBrains Mono', 'Courier New', monospace; font-size:58px; font-weight:700; color:#2F6FAE">94 %</p>
-<p style="font-size:27px; line-height:1.4; color:#4A5568">des <span style="color:#16202C">action_items</span> de référence sont retrouvés. Un seul document tombe à 50 %.</p>
-<p style="font-size:26px; line-height:1.4; color:#4A5568">Mesure lexicale : une reformulation correcte sans mot commun compte comme un échec.</p>
+<div style="flex:1; display:flex; flex-direction:column; gap:16px; background:#FFFFFF; padding:40px; border:1px solid #DDE2E0; border-radius:16px">
+<h3 style="font-size:34px; font-weight:600">Rappel des décisions</h3>
+<p style="font-family:'JetBrains Mono', 'Courier New', monospace; font-size:52px; font-weight:700; color:#2F6FAE">88 %</p>
+<p style="font-size:26px; line-height:1.4; color:#4A5568">des <span style="color:#16202C">action_items</span> de référence retrouvés. Mesure lexicale : une reformulation sans mot commun compte comme un échec.</p>
 </div>
 </div>
-<aside>Les deux dernières mesures, rapidement.
+<div style="display:flex; flex-direction:column; gap:12px; background:#16202C; padding:36px; border-radius:16px; width:1600px">
+<h3 style="font-size:32px; font-weight:600; color:#E0A66A">Ce qu'on a découvert en route</h3>
+<p style="font-size:29px; line-height:1.4; color:#BFD0E0">Deux exécutions à <span style="color:#F7F8F5">température 0</span> donnaient 38 % puis 12 % sur le même contrôle : Ollama tire une graine aléatoire à chaque appel. Nos chiffres n'étaient pas reproductibles. Graine fixée, corpus noté gelé dans un fichier.</p>
+</div>
+<aside>Les deux autres mesures, rapidement.
 
-À gauche, l'effet de l'audience, déjà évoqué. Le recouvrement de vocabulaire entre la version manager et la version ingénieur passe de 100 % à 24 % entre nos deux prompts. C'est notre itération la plus rentable.
+Le registre : le recouvrement de vocabulaire entre la version manager et la version ingénieur passe de 100 % à 30 % entre nos deux prompts.
 
-À droite, le rappel des décisions : 94 % des action items de référence sont retrouvés dans les résumés produits. Un seul document tombe à 50 %.
+Le rappel des décisions : 88 % des action items de référence sont retrouvés. C'est une mesure lexicale, donc probablement un plancher — une reformulation correcte sans mot commun compte comme un échec.
 
-Une précision honnête sur cette mesure : elle est lexicale, pas sémantique. On compare les mots. Si le modèle reformule correctement sans réutiliser les mêmes termes, on compte un échec. Donc 94 % est probablement un plancher, pas un plafond.
+Mais le plus intéressant est en bas. En relançant le notebook, on a obtenu 38 % puis 12 % sur exactement le même contrôle de longueur. On croyait que température zéro suffisait à rendre les résultats reproductibles. C'est faux : Ollama tire une graine aléatoire à chaque appel.
 
-À noter : c'est notre seule mesure entièrement objective, sans annotation humaine ni jugement de modèle.</aside>
+On a donc fixé la graine, et surtout gelé dans un fichier les cinq résumés qu'on avait notés à la main — sinon nos notes auraient porté sur des textes qui n'existent plus. C'est une leçon qu'on n'avait pas anticipée : une évaluation non reproductible ne mesure rien.</aside>
 </section>

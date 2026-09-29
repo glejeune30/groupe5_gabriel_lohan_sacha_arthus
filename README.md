@@ -9,7 +9,8 @@ et le format, évalué par des contrôles automatiques et un juge LLM validé.
 
 | Fichier | Rôle |
 |---|---|
-| `05_controllable_summarizer.ipynb` | Le notebook complet : prompts, évaluation, résultats |
+| `rendu_final_groupe5.ipynb` | **Le rendu** : prompts, évaluation, résultats |
+| `data/scored_summaries.json` | Les 5 résumés notés à la main, gelés avec leurs notes |
 | `data/transcripts.jsonl` | 8 transcriptions, avec `reference_summary` et `action_items` |
 
 ## Prérequis

@@ -30,7 +30,7 @@ comme archive et pour le suivi des versions.
 
 ## Chiffres présentés
 
-Ils proviennent de [../05_controllable_summarizer.ipynb](../05_controllable_summarizer.ipynb),
+Ils proviennent de [../rendu_final_groupe5.ipynb](../rendu_final_groupe5.ipynb),
 exécuté avec `llama3.2:3b`, température 0 et graine fixée à 7.
 
 | Mesure | Résultat |
@@ -52,8 +52,5 @@ même contrôle : Ollama tire une graine aléatoire à chaque appel. La graine e
 désormais fixée, et les 5 résumés notés à la main sont gelés dans
 [../data/scored_summaries.json](../data/scored_summaries.json).
 
-> **Incohérence à trancher.** `rendu_final_groupe5.ipynb` utilise encore
-> `manual_scores = [5, 5, 5, 5, 5]`, le placeholder non rempli, et conclut donc que
-> le juge est à peu près fiable — l'inverse de l'évaluation humaine réelle. Son
-> prompt court a en revanche été repris et remesuré : c'est lui qui fait passer la
-> conformité de longueur de 25 % à 100 %.
+Le prompt court proposé par Gabriel est intégré au rendu : c'est lui qui fait passer
+la conformité de longueur de 25 % à 100 %.

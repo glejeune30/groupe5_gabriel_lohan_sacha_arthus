@@ -1,6 +1,6 @@
-# Projet 5 — Résumeur contrôlable
+# Projet 5 - Résumeur contrôlable
 
-Groupe 5 — Gabriel, Lohan, Sacha, Arthus.
+Groupe 5 - Gabriel, Lohan, Sacha, Arthus.
 
 Un résumeur de transcriptions de réunion dont on contrôle l'audience, la longueur
 et le format, évalué par des contrôles automatiques et un juge LLM validé.
@@ -35,7 +35,7 @@ ollama pull llama3.2:3b
 
 ## Ce que fait le notebook
 
-1. **Contrat de format explicite** — 3 bullets + une section `Actions:`, et surtout
+1. **Contrat de format explicite** : 3 bullets + une section `Actions:`, et surtout
    des contrôles qui vérifient que le modèle obéit.
 2. **Contrôles automatiques** sur les 8 documents : longueur et format, en pass/fail.
 3. **Juge LLM de fidélité**, tolérant au bruit de formatage d'un petit modèle
@@ -53,14 +53,14 @@ ollama pull llama3.2:3b
 | Format respecté (3 bullets + Actions) | 100 % |
 | Longueur ≤ 50 mots | 38 % (médiane : 54 mots) |
 | Juge : résumé fidèle vs falsifié | 4 contre 2 |
-| Juge vs nos notes humaines | écart moyen 2,0 — accord exact 0/5 |
-| Registre v1 (audience nommée) | 100 % de recouvrement — aucun effet |
+| Juge vs nos notes humaines | écart moyen 2,0 - accord exact 0/5 |
+| Registre v1 (audience nommée) | 100 % de recouvrement - aucun effet |
 | Registre v2 (consignes explicites) | 24 % de recouvrement |
 | Rappel des action items | 94 % |
 
 **À retenir.** Le modèle suit parfaitement une contrainte *structurelle* mais mal une
 contrainte *quantitative* : compter des mots n'est pas une opération que le décodage
-effectue. Et une consigne d'audience purement nominale ne change rien à la sortie —
+effectue. Et une consigne d'audience purement nominale ne change rien à la sortie -
 seule une consigne qui dit *quoi changer* fonctionne.
 
 ## Le juge LLM n'est pas fiable seul
@@ -71,7 +71,7 @@ s'effondre : écart moyen de 2 points, aucun accord exact sur 5 documents.
 
 Il attribue 5/5 aux documents 4 et 5, dont les sections `Actions:` contiennent des
 décisions que personne n'a prises. Il repère donc une contradiction voyante mais valide
-sans broncher une invention plausible — exactement le cas dangereux en production.
+sans broncher une invention plausible - exactement le cas dangereux en production.
 
 Un juge validé uniquement par un test automatique aurait donné une fausse assurance :
 c'est la confrontation à un jugement humain qui révèle le problème.

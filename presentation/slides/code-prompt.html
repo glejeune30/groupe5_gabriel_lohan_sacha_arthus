@@ -1,0 +1,24 @@
+<section id="code-prompt" data-transition="fade" style="background:#16202C; color:#F7F8F5; font-family:'IBM Plex Sans', Arial, sans-serif; padding:128px; display:flex; flex-direction:column; gap:40px">
+<p style="font-family:'JetBrains Mono', 'Courier New', monospace; font-size:26px; color:#E0A66A; letter-spacing:2px; text-transform:uppercase">Code &amp; prompts — le prompt principal</p>
+<h2 style="font-size:60px; font-weight:600; line-height:1.1">Un contrat de format, écrit pour être vérifiable</h2>
+<div style="display:flex; gap:40px; align-items:start">
+<p style="width:1000px; font-family:'JetBrains Mono', 'Courier New', monospace; font-size:25px; line-height:1.55; background:#0E1620; padding:36px; border-radius:12px; color:#D8E2EC">Summarize the meeting transcript below.<br><br>Audience: {audience}<br>Hard limits:<br>- At most {max_words} words in total.<br>- <span style="color:#7FB2E0">Exactly 3 bullet points</span>, each starting with "- ".<br>- Then a line containing exactly <span style="color:#7FB2E0">"Actions:"</span><br>&nbsp;&nbsp;followed by one line per action item.<br><br>Return nothing else: no preamble, no title.</p>
+<div style="flex:1; display:flex; flex-direction:column; gap:28px">
+<div style="display:flex; flex-direction:column; gap:10px">
+<h3 style="font-size:32px; font-weight:600; color:#E0A66A">Chaque règle est testable</h3>
+<p style="font-size:28px; line-height:1.4; color:#BFD0E0">« Exactly 3 bullet points » se vérifie en comptant les lignes. « Actions: » se cherche dans le texte.</p>
+</div>
+<div style="display:flex; flex-direction:column; gap:10px">
+<h3 style="font-size:32px; font-weight:600; color:#E0A66A">Interdire explicitement</h3>
+<p style="font-size:28px; line-height:1.4; color:#BFD0E0">« Return nothing else » supprime les préambules du type « Voici le résumé : ».</p>
+</div>
+</div>
+</div>
+<aside>Voici le prompt principal, tel qu'il est dans le code.
+
+Le point de méthode : chaque contrainte est formulée pour être vérifiable par un programme. « Exactly 3 bullet points, each starting with dash » se contrôle en comptant les lignes qui commencent par un tiret. « A line containing exactly Actions » se cherche dans la chaîne. On ne demande jamais quelque chose qu'on ne saura pas mesurer.
+
+Deuxième point : la dernière ligne, « Return nothing else ». Sans elle, un petit modèle ajoute systématiquement « Voici le résumé que vous avez demandé ». Ça casse le parsing.
+
+Le prompt de départ demandait bien 3 bullets, mais rien ne vérifiait que le modèle obéissait.</aside>
+</section>

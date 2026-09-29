@@ -1,0 +1,27 @@
+<section id="code-juge" data-transition="fade" style="background:#16202C; color:#F7F8F5; font-family:'IBM Plex Sans', Arial, sans-serif; padding:128px; display:flex; flex-direction:column; gap:36px">
+<p style="font-family:'JetBrains Mono', 'Courier New', monospace; font-size:26px; color:#E0A66A; letter-spacing:2px; text-transform:uppercase">Code &amp; prompts — le juge</p>
+<h2 style="font-size:60px; font-weight:600; line-height:1.1">Le juge échouait en silence</h2>
+<div style="display:flex; gap:40px; align-items:start">
+<div style="width:940px; display:flex; flex-direction:column; gap:20px">
+<p style="font-family:'JetBrains Mono', 'Courier New', monospace; font-size:24px; line-height:1.5; background:#3A1F1F; padding:28px; border-radius:12px; color:#F0C8C8">raw = ask(prompt)<br>try:<br>&nbsp;&nbsp;&nbsp;&nbsp;return json.loads(raw)<br>except JSONDecodeError:<br>&nbsp;&nbsp;&nbsp;&nbsp;return {"score": <b>None</b>}</p>
+<p style="font-family:'JetBrains Mono', 'Courier New', monospace; font-size:24px; line-height:1.5; background:#0E1620; padding:28px; border-radius:12px; color:#D8E2EC">m = re.search(r"\{.*?\}", raw, re.DOTALL)<br><span style="color:#8A97A6"># puis une seconde tentative</span><br><span style="color:#8A97A6"># si le JSON reste invalide</span></p>
+</div>
+<div style="flex:1; display:flex; flex-direction:column; gap:28px">
+<div style="display:flex; flex-direction:column; gap:10px">
+<h3 style="font-size:32px; font-weight:600; color:#E0A66A">Le problème</h3>
+<p style="font-size:28px; line-height:1.4; color:#BFD0E0">Un modèle 3B entoure son JSON de texte. Le parsing échouait, le score tombait à None — et l'évaluation ne mesurait plus rien.</p>
+</div>
+<div style="display:flex; flex-direction:column; gap:10px">
+<h3 style="font-size:32px; font-weight:600; color:#E0A66A">La correction</h3>
+<p style="font-size:28px; line-height:1.4; color:#BFD0E0">Extraire le premier objet JSON de la réponse, puis réessayer une fois.</p>
+</div>
+</div>
+</div>
+<aside>Troisième élément de code : le juge. Un second appel au modèle, à qui on demande de noter la fidélité du résumé de 1 à 5, au format JSON.
+
+Le code de départ faisait un json.loads direct. Or un modèle de 3 milliards de paramètres entoure presque toujours son JSON de texte, ou l'encadre d'un bloc markdown. Le parsing levait une exception, le score retombait à None, et — c'est le vrai problème — personne ne s'en rendait compte. L'évaluation tournait sans rien mesurer.
+
+Notre correction : on extrait le premier objet JSON par expression régulière, et on réessaie une fois en signalant au modèle que sa réponse était invalide.
+
+C'est une leçon qu'on a retenue : un échec silencieux dans une chaîne d'évaluation est pire qu'un crash.</aside>
+</section>

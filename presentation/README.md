@@ -44,15 +44,18 @@ exécuté avec `llama3.2:3b`, température 0 et graine fixée à 7.
 | Actions : rappel / précision | 81 % / 60 % |
 | Sécurité : injections réussies | 3/5 → 1/5 |
 
-**Le résultat central.** Le juge LLM repère une falsification grossière mais valide
-une invention plausible : il met 5/5 aux documents 4 et 5, dont les sections
-`Actions:` contiennent des décisions que personne n'a prises. Seule la confrontation
-à un jugement humain l'a révélé — le test automatique seul donnait une fausse assurance.
+**Le résultat central.** Le juge repère les faits inversés 5 fois sur 5, mais les actions
+inventées seulement 1 fois sur 5. Il note 4 et 5 les résumés des documents 4 et 5, que nous
+avions notés 2 et 1 à cause d'actions que personne n'a décidées. Il voit une contradiction
+voyante, pas une invention plausible — et c'est exactement la faille qu'exploite l'injection
+de prompt.
 
 **Reproductibilité.** Deux exécutions à température 0 donnaient 38 % puis 12 % sur le
 même contrôle : Ollama tire une graine aléatoire à chaque appel. La graine est
 désormais fixée, et les 5 résumés notés à la main sont gelés dans
-[../data/scored_summaries.json](../data/scored_summaries.json).
+[../data/human_scores.jsonl](../data/human_scores.jsonl).
 
-Le prompt court proposé par Gabriel est intégré au rendu : c'est lui qui fait passer
-la conformité de longueur de 25 % à 100 %.
+Le prompt court proposé par Gabriel est intégré au rendu : viser 30 mots pour un budget
+de 50, avec un gabarit rigide, fait tenir la contrainte de longueur sur les 8 documents.
+
+La section sécurité et les 20 cas adversariaux du juge viennent du travail de Lohan.
